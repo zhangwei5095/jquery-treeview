@@ -1,10 +1,9 @@
 /*
- * Treeview 1.5pre - jQuery plugin to hide and show branches of a tree
+ * Treeview 1.4.2 - jQuery plugin to hide and show branches of a tree
  *
  * http://bassistance.de/jquery-plugins/jquery-plugin-treeview/
- * http://docs.jquery.com/Plugins/Treeview
  *
- * Copyright 2010 Jörn Zaefferer
+ * Copyright Jörn Zaefferer
  * Released under the MIT license:
  *   http://www.opensource.org/licenses/mit-license.php
  */
@@ -200,7 +199,7 @@
 				break;
 			case "location":
 				var current = this.find("a").filter(function() {
-					return this.href.toLowerCase() == location.href.toLowerCase();
+					return location.href.toLowerCase().indexOf(this.href.toLowerCase()) == 0;
 				});
 				if ( current.length ) {
 					// TODO update the open/closed classes
